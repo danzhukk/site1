@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменяем кириллицу на латиницу по клику</title>
+    <script>
+        function edit() {
+            const surname  = document.getElementsByTagName('div')[5]
+            const name  = document.getElementsByTagName('div')[6]
+            const otch = document.getElementsByTagName('div')[7]
+            const data  = document.getElementsByTagName('div')[9]
+            console.log(surname.innerHTML)
+            surname.innerHTML = 'Zhuravlev'
+            console.log(name.innerHTML)
+            name.innerHTML = 'Daniil'
+            console.log(otch.innerHTML)
+            otch.innerHTML = 'Andreevich'
+            console.log(data.innerHTML)
+            data.innerHTML = 'VI.XI.MMV'
+        }
+    </script>
+</head>
+<body style = "background-image: url(passport.jpg);
+    background-position: center-bottom;
+    background-repeat: no-repeat;">
+    <div style="margin-left: 100px; margin-top: 77px; font: bold 90%serif;">ГУ МВД по г. МОСКВЕ</div>
+    <div style="margin-left: 90px;margin-top: 65px;"> 12.12.2018</div>
+    <div style="margin-left: 300px; margin-top: -17px;"> 770-064</div>
+    <div style="margin-left: 340px; margin-top: 38px;"> 3213123</div>
+    <div style="margin-left: 350px; margin-top: 35px; font: bold 90%serif;"> Жур</div>
+    <div style="margin-left: 250px; margin-top: 123px; font: bold 90%serif;"> Журавлев </div>
+    <div style="margin-left: 250px; margin-top: 37px; font: bold 90%serif;"> Даниил </div>
+    <div style="margin-left: 250px; margin-top: 13px; font: bold 90%serif;"> Андреевич </div>
+    <div style="margin-left: 200px; margin-top: 10px;"> муж. </div>
+    <div style="margin-left: 300px; margin-top: -19px;"> 06.11.2005</div>
+    <div style="margin-left: 250px; margin-top: 7px;"> гор.Москва </div>
+    <div style="margin-left: 15px; margin-top: -130px;"> <img src="photo.jpg" height="190" width="147"/> </div>
+    <div onclick="edit()"><h4>Перевод</h4></div>
+    <a href="second.html"><h4>Вернуться</h4></a>
+</body>
+</html>
