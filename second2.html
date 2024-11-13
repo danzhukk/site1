@@ -10,11 +10,18 @@
             const name  = document.getElementsByTagName('div')[6]
             const otch = document.getElementsByTagName('div')[7]
             const data  = document.getElementsByTagName('div')[9]
-            surname.innerHTML = 'Zhuravlev'
-            name.innerHTML = 'Daniil'
-            otch.innerHTML = 'Andreevich'
-            data.innerHTML = 'VI.XI.MMV'
-        }
+            if (surname.innerHTML == "Журавлев") {
+                surname.innerHTML = 'Zhuravlev'
+                name.innerHTML = 'Daniil'
+                otch.innerHTML = 'Andreevich'
+                date.innerHTML = 'VI.XI.MMV'
+            }
+            else {
+                surname.innerHTML = 'Журавлев'
+                name.innerHTML = 'Даниил'
+                otch.innerHTML = 'Андреевич'
+                date.innerHTML = '06.11.2005'
+        }}
     </script>
 </head>
 <body style = "background-image: url(passport.jpg);

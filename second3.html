@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,13 @@
         crossorigin="anonymous"></script>
     <title>Решение алгоритмической задачи</title>
 </head>
+
 <body class="text-center">
     <form action="https://yandex.ru/search/" method="GET">
         <br>
-        <h3><input style = 'width: 67%'; name="question"  value="Даны вещественные числа X и Y . Вычислить Z. Z = XY при X > Y ,Z = ln(X + Y ) в противном случае."></h3>
+        <h3><input style='width: 67%' ; name="question"
+                value="Даны вещественные числа X и Y . Вычислить Z. Z = XY при X > Y ,Z = ln(X + Y ) в противном случае.">
+        </h3>
         <br>
         <input type="text" id="x" name="x" placeholder="Число X" required>
         <br><br>
@@ -23,22 +27,32 @@
         <br><br>
         <p id="otvet"></p>
         <script>
-            function alg(){
+            function alg() {
                 let x = parseFloat(document.getElementById('x').value);
                 let y = parseFloat(document.getElementById('y').value);
                 let z;
-                if (x > y){z = x*y}
-                else {z = Math.log(x + y)}
-                document.getElementById("otvet").innerText = `Результат Z: ${z}`;
-                document.getElementById("otpravka").value = z;
-                document.getElementById("bt").disabled = false;
+                if (isNaN(x) || isNaN(y) || (x <= y && x + y <= 0)) 
+                { document.getElementById('otvet').innerText = "Неверный формат данных"; 
+                  document.getElementById("otpravka").value = "Неверный формат данных";
+                  document.getElementById("bt").disabled = false;
+                }
+                else {
+                    if (x > y) { z = x * y }
+                    else { z = Math.log(x + y) }
+                    document.getElementById("otvet").innerText = `Результат Z: ${z}`;
+                    document.getElementById("otpravka").value = z;
+                    document.getElementById("bt").disabled = false;
+                }
             }
         </script>
-        <input type="hidden" name="otpravka" id ="otpravka">
+        <input type="hidden" name="otpravka" id="otpravka">
         <button type="submit" disabled id="bt">Отправить на сервер</button>
     </form>
     <br>
-    <a href="second.html"><h4>Вернуться</h4></a>
+    <a href="second.html">
+        <h4>Вернуться</h4>
+    </a>
 
 </body>
+
 </html>
